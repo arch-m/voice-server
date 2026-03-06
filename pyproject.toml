@@ -1,0 +1,16 @@
+[project]
+name = "local-model-servers"
+version = "0.1.0"
+description = "Operational tooling for local TTS, ASR, and OCR services."
+requires-python = ">=3.11,<3.12"
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.8.0",
+    "isort>=5.13.2",
+    "pylint>=3.3.1",
+    "pylsp-mypy>=0.7.0",
+    "python-lsp-ruff>=2.2.2",
+    "python-lsp-server>=1.12.0",
+    "pytest>=8.3.3",
+]

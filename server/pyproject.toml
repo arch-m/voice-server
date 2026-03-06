@@ -1,0 +1,14 @@
+[project]
+name = "qwen-voice-server"
+version = "0.1.0"
+description = "FastAPI services for Qwen TTS and voice cloning."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "fastapi>=0.110.0",
+    "numpy>=1.26.0",
+    "pydantic>=2.7.0",
+    "python-multipart>=0.0.9",
+    "qwen-tts",
+    "soundfile>=0.12.1",
+    "uvicorn[standard]>=0.30.0",
+]
