@@ -1,0 +1,21 @@
+[project]
+name = "ocr-deepseek-api"
+version = "0.1.0"
+description = "FastAPI app for DeepSeek OCR 2."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "addict",
+    "easydict",
+    "einops",
+    "fastapi>=0.110.0",
+    "Pillow",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.6.0",
+    "python-multipart>=0.0.9",
+    "tokenizers==0.20.3",
+    "torch==2.6.0",
+    "torchvision>=0.21.0",
+    "transformers==4.46.3",
+    "uvicorn[standard]>=0.30.0",
+]

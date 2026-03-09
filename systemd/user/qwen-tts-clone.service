@@ -1,0 +1,15 @@
+[Unit]
+Description=Qwen TTS Voice Clone API
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT_DIR@
+Environment=PYTHONUNBUFFERED=1
+Environment=QWEN_VOICE_RELOAD=false
+ExecStart=@ROOT_DIR@/scripts/run/qwen-tts-clone.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

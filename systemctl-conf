@@ -1,0 +1,38 @@
+Install versioned units from the repo:
+
+  cd /path/to/repo
+  ./scripts/install/systemd-user-units.sh
+
+Enable services:
+
+  systemctl --user enable --now qwen-tts.service qwen-tts-clone.service qwen-asr.service deepseek-ocr.service glm-ocr.service ocr-gateway.service
+
+Verify:
+
+  systemctl --user status qwen-tts.service
+  systemctl --user status qwen-tts-clone.service
+  systemctl --user status qwen-asr.service
+  systemctl --user status deepseek-ocr.service
+  systemctl --user status glm-ocr.service
+  systemctl --user status ocr-gateway.service
+  curl http://localhost:8002/health
+  curl http://localhost:8004/health
+  curl http://localhost:8003/health
+  curl http://localhost:8010/health
+  curl http://localhost:8011/health
+  curl http://localhost:8012/health
+
+Live logs:
+
+  journalctl --user -u qwen-tts.service -f
+  journalctl --user -u qwen-tts-clone.service -f
+  journalctl --user -u qwen-asr.service -f
+  journalctl --user -u deepseek-ocr.service -f
+  journalctl --user -u glm-ocr.service -f
+  journalctl --user -u ocr-gateway.service -f
+
+Notes:
+
+  - qwen-tts.service uses the proxy to qwen-tts-clone.service when `speaker=MyVoice`.
+  - The TTS units force `QWEN_VOICE_RELOAD=false`.
+  - Source files live in `systemd/user/`.

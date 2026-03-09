@@ -17,8 +17,8 @@
 ;; ARQUITECTURA:
 ;; TTS y ASR corren en servidores separados debido a conflictos de
 ;; dependencias (diferentes versiones de transformers):
-;;   - TTS: http://localhost:8002 (proyecto uv server/)
-;;   - ASR: http://localhost:8003 (proyecto uv server/asr-service/)
+;;   - TTS: http://localhost:8002 (app uv apps/qwen_tts_api/)
+;;   - ASR: http://localhost:8003 (app uv apps/qwen_asr_api/)
 ;;
 ;; Requiere:
 ;; - plz.el para peticiones HTTP

@@ -1,0 +1,15 @@
+[Unit]
+Description=OCR Gateway API
+After=network-online.target
+Wants=deepseek-ocr.service glm-ocr.service
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT_DIR@
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@ROOT_DIR@/scripts/run/ocr-gateway.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

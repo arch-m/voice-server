@@ -29,7 +29,10 @@ MANIFEST
 venv/
 ENV/
 env/
+.env
 .uv-cache/
+*-env/
+.direnv/
 
 # PyInstaller
 *.manifest

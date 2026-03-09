@@ -13,7 +13,11 @@
 ;; para reconocimiento óptico de caracteres (OCR) en imágenes.
 ;;
 ;; Requiere el servidor corriendo en http://localhost:8010
+<<<<<<< HEAD
 ;; Ver: ./tools/deepseek-ocr2/server/deepseek_ocr2_server.py
+=======
+;; Ver: apps/ocr_deepseek_api/main.py
+>>>>>>> de70b7b (remove nix in favor python uv, clean the project and reduce redundancy)
 ;;
 ;; Comandos principales:
 ;; - `deepseek-ocr2-ocr-file': Ejecuta OCR en una imagen y muestra el texto

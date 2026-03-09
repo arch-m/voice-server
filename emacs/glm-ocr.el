@@ -13,7 +13,11 @@
 ;; para reconocimiento optico de caracteres (OCR) en imagenes.
 ;;
 ;; Requiere el servidor corriendo en http://localhost:8011
+<<<<<<< HEAD
 ;; Ver: ./tools/glm-ocr/server/glm_ocr_server.py
+=======
+;; Ver: apps/ocr_glm_api/main.py
+>>>>>>> de70b7b (remove nix in favor python uv, clean the project and reduce redundancy)
 ;;
 ;; Comandos principales:
 ;; - `glm-ocr-ocr-file': Ejecuta OCR en una imagen y muestra el texto

@@ -1,0 +1,14 @@
+[Unit]
+Description=DeepSeek OCR 2 API
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT_DIR@
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@ROOT_DIR@/scripts/run/deepseek-ocr2.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
